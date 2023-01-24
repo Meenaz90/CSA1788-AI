@@ -1,0 +1,29 @@
+# Node data structure
+class Node: 
+
+    def __init__(self, label):        
+        self.out_edges = []
+        self.label = label
+        self.is_goal = False
+
+
+    def add_edge(self, node, weight = 0):          
+        self.out_edges.append(Edge(node, weight))
+
+
+# Edge data structure
+class Edge:
+
+    def __init__(self, node, weight = 0):          
+        self.node = node
+        self.weight = weight
+
+    def to(self):                                  
+        return self.node
+
+
+# Graph data structure, utilises classes Node and Edge
+class Graph:    
+
+    def __init__(self):                             
+        self.nodes = []
